@@ -1,14 +1,15 @@
 import React from "react";
+import "../styles/WorkExperience.css";
 
 class ExpirienceInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      company: '',
-      position: '',
-      tasks: '',
-      dateForm: '',
-      dateUntil: ''
+      company: "",
+      position: "",
+      tasks: "",
+      dateForm: "",
+      dateUntil: "",
     };
   }
 

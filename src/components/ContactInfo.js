@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ContactInfo.css";
 
 // form and form input storage
 class ContactInfo extends React.Component {
