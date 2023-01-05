@@ -1,0 +1,19 @@
+.generalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 25%;
+}
+
+.basicInput {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

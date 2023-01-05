@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.generalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 2px solid black;
+  border-bottom: 0px;
+  gap: 25%;
+}
+
+.basicInput {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
