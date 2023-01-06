@@ -23,64 +23,47 @@ class ExpirienceInfo extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Company:
-          <input
-            type="text"
-            name="company"
-            value={this.state.company}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Position:
-          <input
-            type="text"
-            name="position"
-            value={this.state.position}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Tasks:
-          <input
-            type="text"
-            name="tasks"
-            value={this.state.tasks}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Date From:
-          <input
-            type="date"
-            name="dateFrom"
-            value={this.state.dateFrom}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Date Until:
-          <input
-            type="date"
-            name="dateUntil"
-            value={this.state.dateUntil}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-        <br />
-        <p>Company: {this.state.company}</p>
-        <p>Position: {this.state.position}</p>
-        <p>Tasks: {this.state.tasks}</p>
-        <p>Date From: {this.state.dateFrom}</p>
-        <p>Date Until: {this.state.dateUntil}</p>
+      <form className="generalInfo" onSubmit={this.handleSubmit}>
+        <div className="basicInfo">
+          <h2>Work Experience</h2>
+          <label>
+            <input
+              className="common-input"
+              placeholder="Company"
+              type="text"
+              name="company"
+              value={this.state.company}
+              onChange={this.handleInputChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              className="common-input"
+              placeholder="Position"
+              type="text"
+              name="position"
+              value={this.state.position}
+              onChange={this.handleInputChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              className="common-input"
+              type="text"
+              placeholder="Tasks"
+              name="tasks"
+              value={this.state.tasks}
+              onChange={this.handleInputChange}
+            />
+          </label>
+          <br />
+          <button className="submitBtn" type="submit">
+            Submit
+          </button>
+          <br />
+        </div>
       </form>
     );
   }

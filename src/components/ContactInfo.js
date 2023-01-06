@@ -26,8 +26,10 @@ class ContactInfo extends React.Component {
         <h1 className="header">CV Generator</h1>
         <form className="generalInfo" onSubmit={this.handleSubmit}>
           <div className="basicInput">
+            <h2>Genaral Info</h2>
             <label>
               <input
+                class="common-input"
                 type="text"
                 name="name"
                 placeholder="Full Name"
@@ -39,6 +41,7 @@ class ContactInfo extends React.Component {
             <br />
             <label>
               <input
+                class="common-input"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -50,6 +53,7 @@ class ContactInfo extends React.Component {
             <br />
             <label>
               <input
+                class="common-input"
                 type="tel"
                 name="phone"
                 placeholder="Phone"
@@ -58,14 +62,6 @@ class ContactInfo extends React.Component {
                 onChange={this.handleInputChange}
               />
             </label>
-            <br />
-            <button type="submit">Submit</button>
-            <br />
-          </div>
-          <div className="basicInfo">
-            <p>Name: {this.state.name}</p>
-            <p>Email: {this.state.email}</p>
-            <p>Phone: {this.state.phone}</p>
           </div>
         </form>
       </>
