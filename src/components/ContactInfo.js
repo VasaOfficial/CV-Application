@@ -27,13 +27,15 @@ class ContactInfo extends React.Component {
       return (
         <>
           <h2>General Info</h2>
-          <p>
-            Full Name: {this.state.name}
-            <br />
-            Email: {this.state.email}
-            <br />
-            Phone: {this.state.phone}
-          </p>
+          <div className="card">
+            <p>
+              Full Name: {this.state.name}
+              <br />
+              Email: {this.state.email}
+              <br />
+              Phone: {this.state.phone}
+            </p>
+          </div>
         </>
       );
     } else {

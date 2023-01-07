@@ -25,11 +25,13 @@ class EducationalInfo extends React.Component {
       return (
         <>
           <h2>Education Info</h2>
-          <p>
-            School: {this.state.school}
-            <br />
-            Title of Study: {this.state.study}
-          </p>
+          <div className="card">
+            <p>
+              School: {this.state.school}
+              <br />
+              Title of Study: {this.state.study}
+            </p>
+          </div>
         </>
       );
     } else {

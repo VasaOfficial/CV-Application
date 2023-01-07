@@ -26,7 +26,7 @@ class ExpirienceInfo extends React.Component {
       return (
         <>
           <h2>Work Experience</h2>
-          <p>
+          <p className="card">
             Company: {this.state.company}
             <br />
             Position: {this.state.position}
