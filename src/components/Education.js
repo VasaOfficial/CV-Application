@@ -7,7 +7,7 @@ class EducationalInfo extends React.Component {
     this.state = {
       school: "",
       study: "",
-      date: "",
+      formSubmitted: false,
     };
   }
 
@@ -17,38 +17,56 @@ class EducationalInfo extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({ formSubmitted: true });
   };
 
   render() {
-    return (
-      <form className="generalInfo" onSubmit={this.handleSubmit}>
-        <div className="basicInfo">
+    if (this.state.formSubmitted) {
+      return (
+        <>
           <h2>Education Info</h2>
-          <label>
-            <input
-              className="common-input"
-              type="text"
-              name="school"
-              placeholder="School"
-              value={this.state.school}
-              onChange={this.handleInputChange}
-            />
-          </label>
-          <br />
-          <label>
-            <input
-              className="common-input"
-              type="text"
-              name="study"
-              placeholder="Title of Study"
-              value={this.state.study}
-              onChange={this.handleInputChange}
-            />
-          </label>
-          <br />
-        </div>
-      </form>
-    );
+          <p>
+            School: {this.state.school}
+            <br />
+            Title of Study: {this.state.study}
+          </p>
+        </>
+      );
+    } else {
+      return (
+        <form className="generalInfo" onSubmit={this.handleSubmit}>
+          <div className="basicInfo">
+            <h2>Education Info</h2>
+            <label>
+              <input
+                className="common-input"
+                type="text"
+                name="school"
+                placeholder="School"
+                value={this.state.school}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              <input
+                className="common-input"
+                type="text"
+                name="study"
+                placeholder="Title of Study"
+                value={this.state.study}
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <button className="submitBtn" type="submit">
+              Submit
+            </button>
+            <br />
+          </div>
+        </form>
+      );
+    }
   }
 }
 

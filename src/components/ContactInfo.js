@@ -9,6 +9,7 @@ class ContactInfo extends React.Component {
       name: "",
       email: "",
       phone: "",
+      formSubmitted: false,
     };
   }
 
@@ -18,54 +19,74 @@ class ContactInfo extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({ formSubmitted: true });
   };
 
   render() {
-    return (
-      <>
-        <h1 className="header">CV Generator</h1>
-        <form className="generalInfo" onSubmit={this.handleSubmit}>
-          <div className="basicInput">
-            <h2>Genaral Info</h2>
-            <label>
-              <input
-                class="common-input"
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                value={this.state.name}
-                onChange={this.handleInputChange}
-              />
-            </label>
+    if (this.state.formSubmitted) {
+      return (
+        <>
+          <h2>General Info</h2>
+          <p>
+            Full Name: {this.state.name}
             <br />
-            <label>
-              <input
-                class="common-input"
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                value={this.state.email}
-                onChange={this.handleInputChange}
-              />
-            </label>
+            Email: {this.state.email}
             <br />
-            <label>
-              <input
-                class="common-input"
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                required
-                value={this.state.phone}
-                onChange={this.handleInputChange}
-              />
-            </label>
-          </div>
-        </form>
-      </>
-    );
+            Phone: {this.state.phone}
+          </p>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <form className="generalInfo" onSubmit={this.handleSubmit}>
+            <div className="basicInput">
+              <h2>Genaral Info</h2>
+              <label>
+                <input
+                  class="common-input"
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  value={this.state.name}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br />
+              <label>
+                <input
+                  class="common-input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br />
+              <label>
+                <input
+                  class="common-input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone"
+                  required
+                  value={this.state.phone}
+                  onChange={this.handleInputChange}
+                />
+              </label>
+              <br />
+              <button className="submitBtn" type="submit">
+                Submit
+              </button>
+              <br />
+            </div>
+          </form>
+        </>
+      );
+    }
   }
 }
 

@@ -4,6 +4,9 @@ import EducationalInfo from "./components/Education";
 import ExpirienceInfo from "./components/WorkExperience";
 
 class App extends React.Component {
+  componentDidMount() {
+    document.title = "CV-Generator";
+  }
   render() {
     return (
       <div>
